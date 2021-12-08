@@ -8,11 +8,11 @@ fn main() {
     let mut death = 0;
     // let mut vec = Vec::new();
 
-    //read file line by line
+    // read file line by line
     if let Ok(lines) = read_lines("input.txt") {
         for line in lines {
             if let Ok(ip) = line {
-                //convert string to int and pushes it to vector
+                // split the string and saves it in a vector
                 _test = ip.split_whitespace().map(|s| s.to_string()).collect();
                 let tmp = _test[1].parse::<i32>().unwrap();
                 if _test[0] == "forward" {
